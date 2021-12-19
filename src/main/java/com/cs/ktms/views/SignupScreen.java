@@ -49,10 +49,6 @@ public class SignupScreen implements Initializable {
 		stage.show();
 	}
 
-	public void alert() {
-		throw new UnsupportedOperationException();
-	}
-
 	@Override // Add items into ComboBox
 	public void initialize(URL url, ResourceBundle rb){
 		accountType.getItems().addAll("ClubCoach", "TournamentOrganizer", "Referee");

@@ -35,10 +35,6 @@ public class LoginScreen {
 		}else error.setText("Incorrect email or password");
 	}
 
-	public void alert() {
-		throw new UnsupportedOperationException();
-	}
-
 	public void goToHome(ActionEvent event) throws IOException {
 		Stage stage; Scene scene;
 		Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("HomeScreen.fxml")));

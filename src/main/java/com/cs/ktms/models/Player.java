@@ -1,5 +1,5 @@
 package com.cs.ktms.models;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Player {
 
@@ -7,7 +7,7 @@ public class Player {
 	private String playerName;
 	private String playerEmail;
 	private char playerGender;
-	private Date playerDOB;
+	private LocalDate playerDOB;
 	private byte playerWeight;
 	private byte playerHeight;
 
@@ -43,11 +43,11 @@ public class Player {
 		this.playerGender = playerGender;
 	}
 
-	public Date getPlayerDOB() {
+	public LocalDate getPlayerDOB() {
 		return playerDOB;
 	}
 
-	public void setPlayerDOB(Date playerDOB) {
+	public void setPlayerDOB(LocalDate playerDOB) {
 		this.playerDOB = playerDOB;
 	}
 
@@ -65,6 +65,18 @@ public class Player {
 
 	public void setPlayerHeight(byte playerHeight) {
 		this.playerHeight = playerHeight;
+	}
+
+	@Override
+	public String toString() {
+		return "--- Player ---\n" +
+				"Player Name: " + playerName +
+				", Player Email: " + playerEmail + "\n" +
+				"PlayerGender: " + playerGender +
+				", Player DOB: " + playerDOB + "\n" +
+				"Player Weight: " + playerWeight +
+				", Player Height: " + playerHeight +
+				"\n------------\n\n";
 	}
 }
 // Zaki Kurdya

@@ -1,7 +1,6 @@
 package com.cs.ktms.models;
 
 public class User {
-
     private String email;
     private String gender;
     private String lastname;
