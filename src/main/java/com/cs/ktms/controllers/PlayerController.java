@@ -8,7 +8,7 @@ public class PlayerController {
 
 	private ClubCoach clubCoach;
 	private PlayerAdditionScreen playerAdditionScreen;
-	private DB_Connection dbConnection;
+	private DBConnection dbConnection;
 
 	/**
 	 * 

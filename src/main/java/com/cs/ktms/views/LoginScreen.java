@@ -1,12 +1,12 @@
 package com.cs.ktms.views;
 
-import com.cs.ktms.DataStorage.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -15,11 +15,11 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.Objects;
 
-
 public class LoginScreen {
-	DBConnection dbConnection = new DBConnection();
+	DBConnection dbConnection = DBConnection.getInstance();
 	@FXML private TextField username;
 	@FXML private PasswordField password;
+	@FXML private Label error;
 	public void login(ActionEvent event) throws IOException {
 		if (dbConnection.verifyUser(username.getText(), password.getText())){
 			Stage stage; Scene scene;
@@ -32,10 +32,10 @@ public class LoginScreen {
 			stage.setMaximized(false);
 			stage.setResizable(false);
 			stage.show();
-		}
+		}else error.setText("Incorrect email or password");
 	}
 
-	public void alert() { // to show an error
+	public void alert() {
 		throw new UnsupportedOperationException();
 	}
 
