@@ -1,6 +1,7 @@
-package com.cs.ktms.views;
+package com.cs.ktms.controllers;
 
 import com.cs.ktms.models.Player;
+import com.cs.ktms.views.DBConnection;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -11,7 +12,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PlayerAdditionScreen implements Initializable {
+public class PlayerAdditionController implements Initializable {
 	@FXML private TextField firstName;
 	@FXML private TextField lastName;
 	@FXML private TextField email;

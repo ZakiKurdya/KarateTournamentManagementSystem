@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="903.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.views.PlayerAdditionScreen">
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="903.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.PlayerAdditionController">
     <children>
         <Pane prefHeight="575.0" prefWidth="429.0" style="-fx-background-color: #8df2f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>

@@ -11,6 +11,6 @@ module com.cs.ktms {
     requires eu.hansolo.tilesfx;
     requires java.sql;
 
-    opens com.cs.ktms.views to javafx.fxml;
-    exports com.cs.ktms.views;
+    opens com.cs.ktms.controllers to javafx.fxml;
+    exports com.cs.ktms.controllers;
 }

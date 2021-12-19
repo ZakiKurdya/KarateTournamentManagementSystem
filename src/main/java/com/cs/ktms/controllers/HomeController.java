@@ -1,4 +1,4 @@
-package com.cs.ktms.views;
+package com.cs.ktms.controllers;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -11,7 +11,7 @@ import javafx.stage.StageStyle;
 
 import java.util.Objects;
 
-public class HomeScreen extends Application{
+public class HomeController extends Application{
 
 	public static void main(String[] args) {
 		launch(args);
@@ -20,7 +20,7 @@ public class HomeScreen extends Application{
 	@Override
 	public void start(Stage stage) {
 		try {
-			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("HomeScreen.fxml")));
+			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("HomeScreen.fxml")));
 			stage.initStyle(StageStyle.DECORATED);
 			stage.setMaximized(false);
 			stage.setTitle("Home");
@@ -36,7 +36,7 @@ public class HomeScreen extends Application{
 	public void signIn(ActionEvent event) {
 		try {
 			Stage stage; Scene scene;
-			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("SignIn.fxml")));
+			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("SignIn.fxml")));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
@@ -53,7 +53,7 @@ public class HomeScreen extends Application{
 	public void signUp(ActionEvent event) {
 		try {
 			Stage stage; Scene scene;
-			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("SignUp.fxml")));
+			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("SignUp.fxml")));
 			stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);

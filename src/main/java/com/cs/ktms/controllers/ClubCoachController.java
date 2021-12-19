@@ -1,4 +1,4 @@
-package com.cs.ktms.views;
+package com.cs.ktms.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -10,11 +10,11 @@ import javafx.stage.StageStyle;
 
 import java.util.Objects;
 
-public class ClubCoachMainScreen {
+public class ClubCoachController {
 	public void showScreen(ActionEvent event) {
 		try {
 			Stage stage; Scene scene;
-			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("PlayerAddition.fxml")));
+			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("PlayerAddition.fxml")));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);

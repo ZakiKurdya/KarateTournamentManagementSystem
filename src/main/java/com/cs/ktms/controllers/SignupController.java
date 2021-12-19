@@ -1,7 +1,8 @@
-package com.cs.ktms.views;
+package com.cs.ktms.controllers;
 
 import com.cs.ktms.models.User;
 import com.cs.ktms.models.UserFactoryPattern;
+import com.cs.ktms.views.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +21,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class SignupScreen implements Initializable {
+public class SignupController implements Initializable {
 	@FXML private TextField username;
 	@FXML private TextField email;
 	@FXML private PasswordField password;
@@ -38,7 +39,7 @@ public class SignupScreen implements Initializable {
         	account.setLastname(username.getText().trim().split(" ")[1]);
 		dbConnection.saveUser(account,password.getText());
 		Stage stage; Scene scene;
-		Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("HomeScreen.fxml")));
+		Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("HomeScreen.fxml")));
 		stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
@@ -57,7 +58,7 @@ public class SignupScreen implements Initializable {
 
 	public void goToHome(ActionEvent event) throws IOException {
 		Scene scene; Stage stage;
-		Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("HomeScreen.fxml")));
+		Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("HomeScreen.fxml")));
 		stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);

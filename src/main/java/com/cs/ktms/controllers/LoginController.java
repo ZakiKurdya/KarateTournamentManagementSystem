@@ -1,5 +1,6 @@
-package com.cs.ktms.views;
+package com.cs.ktms.controllers;
 
+import com.cs.ktms.views.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +16,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.Objects;
 
-public class LoginScreen {
+public class LoginController {
 	DBConnection dbConnection = DBConnection.getInstance();
 	@FXML private TextField username;
 	@FXML private PasswordField password;
@@ -23,7 +24,7 @@ public class LoginScreen {
 	public void login(ActionEvent event) throws IOException {
 		if (dbConnection.verifyUser(username.getText(), password.getText())){
 			Stage stage; Scene scene;
-			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("ClubCoachMainScreen.fxml")));
+			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("ClubCoachMainScreen.fxml")));
 			stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
@@ -37,7 +38,7 @@ public class LoginScreen {
 
 	public void goToHome(ActionEvent event) throws IOException {
 		Stage stage; Scene scene;
-		Parent root = FXMLLoader.load(Objects.requireNonNull(HomeScreen.class.getResource("HomeScreen.fxml")));
+		Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("HomeScreen.fxml")));
 		stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
