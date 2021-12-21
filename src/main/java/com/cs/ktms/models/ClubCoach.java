@@ -1,8 +1,8 @@
 package com.cs.ktms.models;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ClubCoach extends User {
-
 	private int clubID;
 	private ArrayList<Team> teams;
 
@@ -18,9 +18,9 @@ public class ClubCoach extends User {
 		return this.teams;
 	}
 
-	public boolean addPlayer(Player player, int teamID) {
+	public boolean addPlayer(Player player, String teamID) {
 		for (Team team: teams) {
-			if (team.getTeamID() == teamID){
+			if (Objects.equals(team.getTeamID(), teamID)){
 				team.addPlayer(player);
 				return true;
 			}

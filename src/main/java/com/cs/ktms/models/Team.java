@@ -1,13 +1,19 @@
 package com.cs.ktms.models;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Team {
+public class Team implements Serializable {
 
-	private ArrayList<Player> players;
-	private int teamID;
+	private ArrayList<Player> players = new ArrayList<>();
+	private String teamID;
 	private String teamName;
 	private byte teamMaxNumber;
 	private String teamCategory;
+
+	public void setPlayers(ArrayList<Player> players) {
+		if (players != null)
+			this.players.addAll(players);
+	}
 
 	public ArrayList<Player> getPlayers() {
 		return players;
@@ -41,11 +47,11 @@ public class Team {
 		this.teamCategory = teamCategory;
 	}
 
-	public int getTeamID() {
+	public String getTeamID() {
 		return teamID;
 	}
 
-	public void setTeamID(int teamID) {
+	public void setTeamID(String teamID) {
 		this.teamID = teamID;
 	}
 }

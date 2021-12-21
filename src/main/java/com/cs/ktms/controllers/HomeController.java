@@ -7,13 +7,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
+import java.io.File;
 import java.util.Objects;
 
 public class HomeController extends Application{
-
 	public static void main(String[] args) {
+		new File("AppData/Teams/").mkdirs();
 		launch(args);
 	}
 
@@ -21,7 +20,6 @@ public class HomeController extends Application{
 	public void start(Stage stage) {
 		try {
 			Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("HomeScreen.fxml")));
-			stage.initStyle(StageStyle.DECORATED);
 			stage.setMaximized(false);
 			stage.setTitle("Home");
 			stage.setResizable(false);
@@ -41,7 +39,6 @@ public class HomeController extends Application{
 			scene = new Scene(root);
 			stage.setScene(scene);
 			stage.setTitle("Sign In");
-			stage.initStyle(StageStyle.DECORATED);
 			stage.setMaximized(false);
 			stage.setResizable(false);
 			stage.show();
@@ -58,7 +55,6 @@ public class HomeController extends Application{
 			scene = new Scene(root);
 			stage.setScene(scene);
 			stage.setTitle("Sign Up");
-			stage.initStyle(StageStyle.DECORATED);
 			stage.setMaximized(false);
 			stage.setResizable(false);
 

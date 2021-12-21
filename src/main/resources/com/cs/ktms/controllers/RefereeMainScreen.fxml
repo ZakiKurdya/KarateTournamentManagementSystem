@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.ClubCoachController">
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.RefereeController">
     <children>
         <AnchorPane prefHeight="503.0" prefWidth="570.0" style="-fx-background-color: #8df2f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -17,27 +17,11 @@
                         <Font name="Roboto Light" size="25.0" />
                     </font>
                 </Label>
-            <Label alignment="CENTER" layoutX="179.0" layoutY="107.0" prefHeight="34.0" prefWidth="212.0" text="Club Coach" textFill="#282828">
+            <Label alignment="CENTER" layoutX="154.0" layoutY="116.0" prefHeight="34.0" prefWidth="262.0" text="Referee" textFill="#282828">
                <font>
                   <Font name="Roboto Black" size="21.0" />
                </font>
             </Label>
-                <Button fx:id="btnSignin" layoutX="154.0" layoutY="282.0" mnemonicParsing="false" onAction="#showPlayerScreen" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #ebea73; -fx-background-radius: 20px;" text="Add Player">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btnSignin1" layoutX="154.0" layoutY="227.0" mnemonicParsing="false" onAction="#showTeamScreen" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #ebea73; -fx-background-radius: 20px;" text="Create Team">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
             <Button fx:id="btnSignin2" layoutX="154.0" layoutY="372.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #658c94; -fx-background-radius: 20px;" text="Sign Out" textFill="WHITE">
                <font>
                   <Font size="18.0" />
@@ -46,6 +30,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Label alignment="CENTER" layoutX="34.0" layoutY="234.0" prefHeight="34.0" prefWidth="502.0" text="Section Under Development !" textFill="#658c94">
+               <font>
+                  <Font name="Open Sans ExtraBold" size="25.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
           <ImageView fitHeight="332.0" fitWidth="281.0" layoutX="570.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">

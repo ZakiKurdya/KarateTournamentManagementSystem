@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.SignupController">
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.SignupController">
     <children>
         <AnchorPane prefHeight="503.0" prefWidth="382.0" style="-fx-background-color: #8df2f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -44,8 +44,8 @@
                         <Font name="Segoe UI" size="10.0" />
                     </font>
                 </Label>
+            <ComboBox fx:id="accountType" layoutX="8.0" layoutY="187.0" prefHeight="34.0" prefWidth="275.0" promptText="Select Account Type" style="-fx-background-color: #658c94;" />
             <PasswordField fx:id="password" layoutX="8.0" layoutY="107.0" prefHeight="34.0" prefWidth="275.0" promptText="Password" />
-            <ComboBox fx:id="accountType" layoutX="8.0" layoutY="187.0" prefHeight="34.0" prefWidth="275.0" style="-fx-background-color: #658c94;" />
             </children>
         </Pane>
       <Button layoutX="410.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="58.0" prefWidth="52.0" style="-fx-background-color: white;">

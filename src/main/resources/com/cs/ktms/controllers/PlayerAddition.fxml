@@ -12,15 +12,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="903.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.PlayerAdditionController">
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="903.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.PlayerAdditionController">
     <children>
         <Pane prefHeight="575.0" prefWidth="429.0" style="-fx-background-color: #8df2f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <ImageView fitHeight="93.0" fitWidth="94.0" layoutX="168.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/vector.png" />
-                    </image>
-                </ImageView>
                 <Label alignment="CENTER" layoutX="37.0" layoutY="36.0" prefHeight="23.0" prefWidth="354.0" text="Karate Tournament Management System" textFill="#434343">
                     <font>
                         <Font name="Roboto Black" size="18.0" />
@@ -29,25 +24,35 @@
                 <TextField fx:id="firstName" layoutX="75.0" layoutY="164.0" prefHeight="32.0" prefWidth="278.0" promptText="firstname" />
                 <TextField fx:id="lastName" layoutX="75.0" layoutY="205.0" prefHeight="32.0" prefWidth="278.0" promptText="lastname" />
                 <TextField fx:id="email" layoutX="75.0" layoutY="245.0" prefHeight="32.0" prefWidth="278.0" promptText="email" />
-                <DatePicker fx:id="DOB" layoutX="75.0" layoutY="327.0" prefHeight="32.0" prefWidth="278.0" promptText="dob" />
-                <Button fx:id="btnSave" layoutX="76.0" layoutY="472.0" mnemonicParsing="false" onAction="#savePlayer" prefHeight="32.0" prefWidth="278.0" style="-fx-background-color: #ebea73; -fx-background-radius: 20px;" text="Add Player" textAlignment="CENTER">
+                <ComboBox fx:id="gender" editable="true" layoutX="76.0" layoutY="285.0" prefHeight="32.0" prefWidth="278.0" promptText="gender">
+                </ComboBox>
+                <DatePicker fx:id="DOB" layoutX="75.0" layoutY="326.0" prefHeight="32.0" prefWidth="278.0" promptText="dob" />
+            <TextField fx:id="height" layoutX="75.0" layoutY="367.0" prefHeight="32.0" prefWidth="278.0" promptText="height" />
+            <TextField fx:id="weight" layoutX="75.0" layoutY="407.0" prefHeight="32.0" prefWidth="278.0" promptText="weight" />
+                <Button fx:id="btnSave" layoutX="76.0" layoutY="498.0" mnemonicParsing="false" onAction="#savePlayer" prefHeight="32.0" prefWidth="278.0" style="-fx-background-color: #ebea73; -fx-background-radius: 20px;" text="Add Player" textAlignment="CENTER">
                <font>
                   <Font name="Roboto Medium" size="13.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <ComboBox fx:id="gender" editable="true" layoutX="76.0" layoutY="285.0" prefHeight="32.0" prefWidth="278.0" promptText="gender">
-                </ComboBox>
-            <TextField fx:id="weight" layoutX="75.0" layoutY="408.0" prefHeight="32.0" prefWidth="278.0" promptText="weight" />
-            <TextField fx:id="height" layoutX="75.0" layoutY="368.0" prefHeight="32.0" prefWidth="278.0" promptText="height" />
+            <ComboBox fx:id="team" editable="true" layoutX="76.0" layoutY="448.0" prefHeight="32.0" prefWidth="278.0" promptText="Select Team" />
+            <Button layoutX="160.0" layoutY="59.0" mnemonicParsing="false" onAction="#goToMain" prefHeight="80.0" prefWidth="84.0" style="-fx-background-color: #8df2f3;">
+               <graphic>
+                      <ImageView fitHeight="93.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/vector.png" />
+                          </image>
+                      </ImageView>
+               </graphic>
+            </Button>
             </children>
         </Pane>
         <Label fx:id="lblStatus" layoutX="452.0" layoutY="23.0" prefHeight="32.0" prefWidth="354.0" text="Players:">
          <font>
             <Font name="Roboto Black" size="15.0" />
          </font></Label>
-      <Label fx:id="result" alignment="TOP_CENTER" layoutX="452.0" layoutY="58.0" lineSpacing="3.0" prefHeight="489.0" prefWidth="429.0" style="-fx-background-color: #F5F5F5; -fx-label-padding: 20px;" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="result" alignment="TOP_CENTER" layoutX="452.0" layoutY="58.0" lineSpacing="3.0" prefHeight="489.0" prefWidth="429.0" style="-fx-background-color: #F5F5F5; -fx-label-padding: 20px; -fx-wrap-text: true;" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Roboto Medium" size="12.0" />
          </font>

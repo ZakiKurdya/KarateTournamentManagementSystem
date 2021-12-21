@@ -1,7 +1,8 @@
 package com.cs.ktms.models;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Player {
+public class Player implements Serializable {
 
 	private int playerID;
 	private String playerName;

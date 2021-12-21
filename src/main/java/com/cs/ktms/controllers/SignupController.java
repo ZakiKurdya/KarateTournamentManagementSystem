@@ -14,7 +14,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -37,14 +36,13 @@ public class SignupController implements Initializable {
 			account.setLastname(" ");
         else
         	account.setLastname(username.getText().trim().split(" ")[1]);
-		dbConnection.saveUser(account,password.getText());
+		dbConnection.saveUser(account,password.getText(),(String) accountType.getValue());
 		Stage stage; Scene scene;
 		Parent root = FXMLLoader.load(Objects.requireNonNull(HomeController.class.getResource("HomeScreen.fxml")));
 		stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.setTitle("Home");
-		stage.initStyle(StageStyle.DECORATED);
 		stage.setMaximized(false);
 		stage.setResizable(false);
 		stage.show();
@@ -53,7 +51,6 @@ public class SignupController implements Initializable {
 	@Override // Add items into ComboBox
 	public void initialize(URL url, ResourceBundle rb){
 		accountType.getItems().addAll("ClubCoach", "TournamentOrganizer", "Referee");
-		accountType.setValue("ClubCoach");
 	}
 
 	public void goToHome(ActionEvent event) throws IOException {
@@ -63,7 +60,6 @@ public class SignupController implements Initializable {
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.setTitle("Home");
-		stage.initStyle(StageStyle.DECORATED);
 		stage.setMaximized(false);
 		stage.setResizable(false);
 		stage.show();
