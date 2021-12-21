@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.ClubCoachController">
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs.ktms.controllers.ClubCoachController">
     <children>
         <AnchorPane prefHeight="503.0" prefWidth="570.0" style="-fx-background-color: #8df2f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -22,7 +22,15 @@
                   <Font name="Roboto Black" size="21.0" />
                </font>
             </Label>
-                <Button fx:id="btnSignin" layoutX="154.0" layoutY="252.0" mnemonicParsing="false" onAction="#showScreen" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #ebea73; -fx-background-radius: 20px;" text="Add Player">
+                <Button fx:id="btnSignin" layoutX="154.0" layoutY="295.0" mnemonicParsing="false" onAction="#showPlayerScreen" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #ebea73; -fx-background-radius: 20px;" text="Add Player">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnSignin1" layoutX="154.0" layoutY="227.0" mnemonicParsing="false" onAction="#showTeamScreen" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #ebea73; -fx-background-radius: 20px;" text="Create Team">
                <font>
                   <Font size="18.0" />
                </font>
