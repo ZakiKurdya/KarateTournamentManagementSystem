@@ -2,7 +2,7 @@ package com.cs.ktms.models;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Player implements Serializable {
+public class Player implements Serializable { // serialization is the conversion of a Java object into a static stream (sequence) of bytes, which we can then save to a database or transfer over a network
 
 	private int playerID;
 	private String playerName;

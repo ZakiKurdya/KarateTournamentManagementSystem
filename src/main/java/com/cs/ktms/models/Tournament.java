@@ -1,7 +1,8 @@
 package com.cs.ktms.models;
+import java.io.Serializable;
 import java.util.Date;
 
-public class Tournament {
+public class Tournament implements Serializable {
 
 	private String tournamentName;
 	private String tournamentType;

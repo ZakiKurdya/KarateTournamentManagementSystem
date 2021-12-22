@@ -20,6 +20,7 @@ public class LoginController {
 	@FXML private TextField username;
 	@FXML private PasswordField password;
 	@FXML private Label error;
+
 	public void login(ActionEvent event) throws IOException {
 		if (dbConnection.verifyUser(username.getText(), password.getText())){
 			if (dbConnection.getAccountType(username.getText()).equals("ClubCoach")){

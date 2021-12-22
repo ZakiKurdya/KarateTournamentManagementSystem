@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Team implements Serializable {
 
-	private ArrayList<Player> players = new ArrayList<>();
+	private final ArrayList<Player> players = new ArrayList<>();
 	private String teamID;
 	private String teamName;
 	private byte teamMaxNumber;
